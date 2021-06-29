@@ -1,0 +1,58 @@
+.wrap-on{
+    flex-wrap: wrap;
+}
+.m80{
+    margin: 80px auto 20px auto;
+    @include mobile{
+        margin: 40px auto 10px auto;
+    }
+}
+.mt3{
+    margin-top: 3px;
+}
+.product-item{
+    width: 23%;
+    margin-bottom: 55px;
+    @include mobile{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    .product-pic{
+        margin-bottom: 2px;
+    }
+    h2{
+        font-size: $fz-m;
+    }
+    p{
+        font-size: $fz-xs;
+    }
+    a{
+        color: $primary;
+        padding-right: 10px;
+        &:hover{
+            color: $primary-light;
+        }
+    }
+    span{
+        color: $secondary;
+        text-decoration: line-through;
+        margin-left: 8px;
+    }
+}
+
+
+.page-number{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    a{
+        margin-right: 10px;
+        font-size: $fz-s;
+        color: $black;
+        &:hover{
+            color: $primary-light;
+            text-decoration: underline;
+        }
+    }
+}

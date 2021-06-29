@@ -1,0 +1,505 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+.more-info {
+  display: block;
+  margin-top: 16px;
+  color: #AC8A46;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .more-info {
+    margin-top: 8px;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.mb4 {
+  margin-bottom: 4px;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.mb52 {
+  margin-bottom: 52px;
+}
+
+.both-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu {
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .menu a {
+  color: #8D8D8D;
+  display: block;
+  padding: 5px;
+  position: relative;
+}
+.header .menu a:hover {
+  color: #916000;
+}
+.header .menu em {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header .menu em {
+    display: block;
+    background: #916000;
+    width: 16px;
+    height: 13px;
+    text-align: center;
+    line-height: 13px;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.m-block {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .m-block {
+    display: block;
+  }
+
+  .m-none {
+    display: none;
+  }
+}
+.label-list {
+  background: #916000;
+}
+.label-list .label-name {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+.label-list .label-name li {
+  padding-right: 28px;
+}
+.label-list .label-name a {
+  font-size: 20px;
+  color: #fff;
+}
+.label-list .label-name a:hover {
+  color: #8D8D8D;
+}
+
+.mail-banner {
+  max-width: 100%;
+  height: 600px;
+  background: url(../img/index10.jpg) no-repeat center center;
+  background-size: 110%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .mail-banner {
+    background-position: 10% 0;
+  }
+}
+
+.mail-banner-word {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.mail-banner-word h5 {
+  font-size: 32px;
+  color: #8D8D8D;
+}
+.mail-banner-word .subscribe {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.mail-banner-word .subscribe-fillin {
+  background: #fff;
+  border: 1px solid #916000;
+  border-radius: 4px 0 0 4px;
+  padding: 20px;
+  font-size: 20px;
+}
+.mail-banner-word .subscribe-btn a {
+  width: 30%;
+  background: #916000;
+  border: 2px solid #916000;
+  border-radius: 0 4px 4px 0;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .mail-banner-word {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.footer {
+  background: #916000;
+}
+
+.copyrights {
+  display: flex;
+  align-items: center;
+}
+.copyrights h1 {
+  margin-right: 20px;
+}
+.copyrights p {
+  color: #fff;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .copyrights {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+.bottom-menu li {
+  padding: 28px;
+}
+.bottom-menu a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+.bottom-menu a:hover {
+  color: #8D8D8D;
+}
+
+.banner {
+  height: 870px;
+  background: url(../img/index1.jpg) no-repeat center center;
+  background-size: cover;
+  margin-bottom: 60px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 480px;
+    max-width: 100%;
+    margin-bottom: 40px;
+    background-position: 10% 0;
+  }
+}
+
+.banner-word {
+  max-width: 445px;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  color: #fff;
+}
+.banner-word h2 {
+  font-size: 40px;
+}
+.banner-word p {
+  font-size: 24px;
+}
+.banner-word a {
+  max-width: 60%;
+  display: block;
+  padding: 18px 50px;
+  margin-top: 16px;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .banner-word a {
+    max-width: 100%;
+  }
+}
+.banner-word a:hover {
+  color: #8D8D8D;
+}
+
+@media (max-width: 768px) {
+  .banner-word {
+    width: 345px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .banner-word h2 {
+    font-size: 32px;
+  }
+  .banner-word p {
+    font-size: 20px;
+  }
+}
+.hit-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hit-product .hit-product-pic {
+  width: 50%;
+}
+.hit-product .hit-product-text {
+  width: 50%;
+  padding: 0 110px;
+}
+.hit-product .hit-product-text h3 {
+  font-size: 32px;
+}
+.hit-product .hit-product-text p {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .hit-product .hit-product-pic {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .hit-product .hit-product-pic {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .hit-product .hit-product-text {
+    width: 100%;
+    padding: 0 0;
+  }
+}
+.rr-c {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .rr-c, .r-c {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+}
+.mb60 {
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .mb60 {
+    margin-bottom: 40px;
+  }
+}
+
+.p92 {
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.plan-btn {
+  max-width: 60%;
+  display: block;
+  padding: 18px 50px;
+  margin-top: 16px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 30px;
+  color: #000;
+  font-size: 20px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .plan-btn {
+    max-width: 100%;
+  }
+}
+.plan-btn:hover {
+  color: #8D8D8D;
+}
+
+.sales-product-bg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #E0E0E0;
+}
+.sales-product-bg .sales-product {
+  display: flex;
+  justify-content: space-between;
+}
+.sales-product-bg li {
+  width: 32%;
+}
+.sales-product-bg li h4 {
+  font-size: 24px;
+}
+.sales-product-bg li p {
+  fz: 16px;
+}
+.sales-product-bg li span {
+  color: #8D8D8D;
+  margin-left: 8px;
+}
+
+/*有問題的sold out 目前完全沒顯示
+.mask-soldout{
+    width: 100%;
+    height: 400px;
+    background: $black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    p{
+        font-size: $fz-m;
+        line-height: 400px;
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+.soldout-product{
+    position: relative;
+} 
+*/
+@media (max-width: 768px) {
+  .sales-product-bg {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .sales-product-bg .sales-product {
+    flex-direction: column;
+  }
+  .sales-product-bg li {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+.recycle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto;
+}
+.recycle .recycle-pic {
+  width: 65%;
+}
+.recycle .recycle-text {
+  width: 30%;
+}
+.recycle .recycle-text h3 {
+  font-size: 32px;
+}
+.recycle .recycle-text p {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .recycle .recycle-pic {
+    width: 100%;
+  }
+  .recycle .recycle-text {
+    width: 100%;
+  }
+}

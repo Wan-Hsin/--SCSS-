@@ -1,0 +1,203 @@
+//封面頁內容物scss//
+
+//banner//
+.banner{
+    height: 870px;
+    background: url(../img/index1.jpg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 60px;
+    position: relative;
+    @include mobile{
+        height: 480px;
+        max-width: 100%;
+        margin-bottom: 40px;
+        background-position: 10% 0;
+    }
+}
+.banner-word{
+    max-width: 445px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    color: $white;
+    h2{
+        font-size: $fz-xl;
+    }
+    p {
+        font-size: $fz-m;
+    }
+    a{
+        @include btn($white);
+        &:hover{
+            color: $secondary;
+        }
+    }
+}
+@include mobile{
+    .banner-word{
+        width: 345px;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        h2{
+            font-size: $fz-l;
+        }
+        p{
+            font-size: $fz-s;
+        }
+    }
+}
+
+//主打商品//
+.hit-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .hit-product-pic{
+        width: 50%;
+    }
+    .hit-product-text{
+        width: 50%;
+        padding: 0 110px; //不能固定推110不然會變形
+        h3{
+            font-size: $fz-l;
+        }
+        p{
+            font-size: $fz-s;
+        }
+    }
+}
+@include mobile{
+    .hit-product{
+        .hit-product-pic{
+            width: 100%;
+            @include mobile{
+                margin-bottom: 8px;
+            }  
+    }
+    .hit-product-text{
+        width: 100%;
+        padding: 0 0;
+    }
+}
+}
+.rr-c{
+    flex-direction: row-reverse;
+}
+@include mobile{
+    .rr-c, .r-c{
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+}
+.mb60{
+    margin-bottom: 60px;
+    @include mobile{
+        margin-bottom: 40px;
+    }
+}
+.p92{
+    padding-top: 92px;
+    padding-bottom: 92px;
+}
+.plan-btn{
+    @include btn($black);
+    max-width: 100%;
+    margin-top: 20px;
+    &:hover{
+        color: $secondary;
+    }
+}
+
+
+//特惠商品//
+.sales-product-bg{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $secondary-light;
+    .sales-product{
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        width: 32%;
+        h4{
+            font-size: $fz-m;
+        }
+        p{
+            fz: $fz-xs;
+        }
+        span{
+            color: $secondary;
+            margin-left: 8px;
+        }
+    }
+}
+/*有問題的sold out 目前完全沒顯示
+.mask-soldout{
+    width: 100%;
+    height: 400px;
+    background: $black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    p{
+        font-size: $fz-m;
+        line-height: 400px;
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+.soldout-product{
+    position: relative;
+} 
+*/
+
+@include mobile{
+    .sales-product-bg{
+        padding-top: 32px;
+        padding-bottom: 32px;
+        .sales-product{
+            flex-direction: column;
+        }
+        li{
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+//回收服務//
+.recycle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    .recycle-pic{
+        width: 65%;
+    }
+    .recycle-text{
+        width: 30%;
+        h3{
+            font-size: $fz-l;
+        }
+        p{
+            font-size: $fz-s;
+        }
+    }
+}
+@include mobile{
+    .recycle{
+        .recycle-pic{
+            width: 100%;
+        }
+        .recycle-text{
+            width: 100%;        }
+    }
+}
+
+

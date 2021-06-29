@@ -1,0 +1,248 @@
+//字體//
+
+
+//文字設定//
+h1, h2, h3, h4, h5, p{
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5{
+    font-weight: bold;
+}
+p{
+    text-align: justify;
+}
+
+
+//手機版調整//
+@mixin mobile{
+    @media (max-width:768px) {
+        @content
+    }
+};
+@mixin mobile-special{
+    @media (max-width:768px) {
+        .m-block{
+            display: block;
+        }
+        .m-none{
+            display: none;
+        }
+    }
+}
+
+
+//連結//
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+//                        常用設計                   //
+//按鈕//
+@mixin btn($color){
+    max-width: 60%;
+    display: block;
+    padding: 18px 50px;
+    margin-top: 16px;
+    text-align: center;
+    border: 2px solid $color;
+    border-radius: 30px;
+    color: $color;
+    font-size: $fz-s;
+    @include mobile{
+        max-width: 100%;
+    }
+}
+
+//查看更多//
+.more-info{
+    display: block;
+    margin-top: 16px;
+    color: $primary-light;
+    font-size: $fz-xs;
+    @include mobile{
+        margin-top: 8px;
+    }
+}
+
+//推擠//
+.container{
+    max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+.mb4{
+    margin-bottom: 4px;
+}
+.mb8{
+    margin-bottom: 8px;
+}
+.mb16{
+    margin-bottom: 16px;
+}
+.mb52{
+    margin-bottom: 52px;
+}
+
+//排列//
+.both-side{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+//表頭//
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu{
+        max-width: 450px;
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: $secondary;
+            display: block;
+            padding: 5px;
+            position: relative;
+            &:hover{
+                color: $primary;
+            }
+        }
+        em{
+            display: none;
+        }
+        @include mobile{
+        em{
+            display: block;
+            background: $primary;
+            width: 16px;
+            height: 13px;
+            text-align: center;
+            line-height: 13px;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            font-size: 12px;
+        }
+        }
+    }
+}
+.m-block{
+    display: none;
+}
+@include mobile-special;
+
+//封面頁品牌列//
+.label-list{
+    background: $primary;
+    .label-name{
+        height: 52px;
+        display: flex;
+        align-items: center; 
+        li{
+            padding-right: 28px;
+        }
+        a{
+            font-size: $fz-s;
+            color: $white;
+            &:hover{
+            color: $secondary;
+            }
+        }
+    }   
+}
+
+//訂閱的banner//
+.mail-banner{
+    max-width: 100%;
+    height: 600px;
+    background: url(../img/index10.jpg) no-repeat center center;
+    background-size: 110%;
+    position: relative;
+    @include mobile{
+        background-position: 10% 0;
+    }
+}
+.mail-banner-word{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    h5{
+        font-size: $fz-l;
+        color: $secondary;
+    }
+    .subscribe{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .subscribe-fillin{
+        background: $white;
+        border: 1px solid $primary;
+        border-radius: 4px 0 0 4px;
+        padding: 20px;
+        font-size: $fz-s;
+    }
+    .subscribe-btn a{
+        width: 30%;
+        background: $primary;
+        border: 2px solid $primary;
+        border-radius: 0 4px 4px 0;
+        padding: 20px;
+        font-size: $fz-s;
+        color: $white;
+    }
+}
+@include mobile{
+    .mail-banner-word{
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+
+//表尾//
+.footer{
+    background: $primary;
+}
+.copyrights{
+    display: flex;
+    align-items: center;
+    h1{
+        margin-right: 20px;
+    }
+    p{
+        color: $white;
+        font-size: 14px;
+    }
+}
+@include mobile{
+    .copyrights{
+        max-width: 100%;
+        margin: 20px auto;;
+    }
+}
+
+.bottom-menu{
+    li{
+        padding: 28px;
+    }
+    a{
+        display: block;
+        color: $white;
+        font-size: $fz-s;
+        &:hover{
+            color: $secondary;
+        }
+    }
+}
