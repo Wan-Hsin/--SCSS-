@@ -1,5 +1,7 @@
 //封面頁內容物scss//
-
+*,html,body {
+    box-sizing: border-box;
+}
 //banner//
 .banner{
     height: 870px;
@@ -51,15 +53,21 @@
 //主打商品//
 .hit-product{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
     .hit-product-pic{
         width: 50%;
+        height:555px;
+        img {
+            width:100%;
+            object-fit: cover;
+            height:100%;
+            object-position: left;
+        }
     }
     .hit-product-text{
         width: 50%;
-        padding: 0 110px; //不能固定推110不然會變形
+        padding: 0 110px;
+
         h3{
             font-size: $fz-l;
         }
@@ -67,11 +75,22 @@
             font-size: $fz-s;
         }
     }
+    .hit-product-text-2{
+        width: 50%;
+        padding: 0 110px;
+        h4{
+            font-size: $fz-m;
+        }
+        p{
+            font-size: $fz-xs;
+        }
+    }
 }
 @include mobile{
     .hit-product{
         .hit-product-pic{
             width: 100%;
+            height: 350px;
             @include mobile{
                 margin-bottom: 8px;
             }  
@@ -81,6 +100,15 @@
         padding: 0 0;
     }
 }
+}
+.hit-product-pic-2{
+    width: 50%;
+    height: 1080px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .rr-c{
     flex-direction: row-reverse;
@@ -117,12 +145,23 @@
     padding-bottom: 40px;
     background-color: $secondary-light;
     .sales-product{
-        display: flex;
-        justify-content: space-between;
-    }
-    li{
         width: 32%;
-        h4{
+        margin-right: 2%;
+    }
+
+    .sales-product-pic{
+        width: 100%;
+        height: 540px;
+        @include mobile{
+            height: 350px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .sales-product-text{       
+        h5{
             font-size: $fz-m;
         }
         p{
@@ -130,31 +169,35 @@
         }
         span{
             color: $secondary;
+            text-decoration: line-through;
             margin-left: 8px;
         }
     }
 }
-/*有問題的sold out 目前完全沒顯示
-.mask-soldout{
-    width: 100%;
-    height: 400px;
-    background: $black;
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    p{
-        font-size: $fz-m;
-        line-height: 400px;
-        color: $white;
-        font-weight: bold;
-        text-align: center;
-    }
+.flex{
+    display: flex;
 }
-.soldout-product{
-    position: relative;
-} 
-*/
+// 完全沒顯示
+// .mask-soldout{
+//     width: 100%;
+//     height: 400px;
+//     background-color: $black;
+//     opacity: 0.3;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     p{
+//         font-size: $fz-m;
+//         line-height: 400px;
+//         color: $white;
+//         font-weight: bold;
+//         text-align: center;
+//     }
+// }
+// .soldout-pic{
+//     position: relative;
+// }
+
 
 @include mobile{
     .sales-product-bg{

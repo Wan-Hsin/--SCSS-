@@ -1,4 +1,9 @@
+body {
+    overflow-x: hidden;
+}
+
 .wrap-on{
+    display: flex;
     flex-wrap: wrap;
 }
 .m80{
@@ -7,24 +12,42 @@
         margin: 40px auto 10px auto;
     }
 }
-.mt3{
-    margin-top: 3px;
+.mb3{
+    margin-bottom: 3px;
 }
 .product-item{
-    width: 23%;
+    width: 25%;
     margin-bottom: 55px;
-    @include mobile{
-        width: 48%;
-        margin-bottom: 30px;
+    @media (max-width:767px){
+        width:50%;
     }
-    .product-pic{
-        margin-bottom: 2px;
+    .img-block{
+        display:block;
+        width: 100%;
+        height: 255px;
+        @media (max-width:767px){
+            height:165px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     }
     h2{
         font-size: $fz-m;
+        @include mobile{
+            font-size: $fz-s;
+        }
     }
     p{
         font-size: $fz-xs;
+    }
+    span{
+        color: $secondary;
+        text-decoration: line-through;
+        margin-left: 8px;
     }
     a{
         color: $primary;
@@ -33,11 +56,22 @@
             color: $primary-light;
         }
     }
-    span{
-        color: $secondary;
-        text-decoration: line-through;
-        margin-left: 8px;
-    }
+}
+
+
+
+//圖片位置調整
+.adjust-up{
+    object-position:0 90%;
+}
+.adjust-down{
+    object-position:0 20%;
+}
+.adjust-2{
+    object-position: bottom;
+}
+.adjust-6{
+    object-position:left;
 }
 
 

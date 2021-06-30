@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -62,11 +61,11 @@ img {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
@@ -84,7 +83,7 @@ a {
   color: #AC8A46;
   font-size: 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .more-info {
     margin-top: 8px;
   }
@@ -140,7 +139,7 @@ a {
 .header .menu em {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header .menu em {
     display: block;
     background: #916000;
@@ -161,7 +160,7 @@ a {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .m-block {
     display: block;
   }
@@ -190,57 +189,53 @@ a {
 }
 
 .mail-banner {
-  max-width: 100%;
   height: 600px;
   background: url(../img/index10.jpg) no-repeat center center;
-  background-size: 110%;
+  background-size: cover;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mail-banner {
-    background-position: 10% 0;
+    background-position: left;
   }
 }
-
-.mail-banner-word {
-  position: absolute;
+.mail-banner .mail-banner-word {
+  position: relative;
   top: 50%;
   left: 20%;
 }
-.mail-banner-word h5 {
-  font-size: 32px;
-  color: #8D8D8D;
-}
-.mail-banner-word .subscribe {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-.mail-banner-word .subscribe-fillin {
-  background: #fff;
-  border: 1px solid #916000;
-  border-radius: 4px 0 0 4px;
-  padding: 20px;
-  font-size: 20px;
-}
-.mail-banner-word .subscribe-btn a {
-  width: 30%;
-  background: #916000;
-  border: 2px solid #916000;
-  border-radius: 0 4px 4px 0;
-  padding: 20px;
-  font-size: 20px;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .mail-banner-word {
-    width: 100%;
-    top: 50%;
+@media (max-width: 767px) {
+  .mail-banner .mail-banner-word {
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-70%, -50%);
   }
 }
+@media (max-width: 415px) {
+  .mail-banner .mail-banner-word {
+    top: 60%;
+    left: 70%;
+    transform: translate(-60%, -70%);
+  }
+}
+.mail-banner .mail-banner-word h6 {
+  font-size: 40px;
+  color: #8D8D8D;
+}
+.mail-banner .mail-banner-word .subscribe-fillin {
+  padding: 20px;
+  border: 2px solid #916000;
+  border-radius: 4px 0 0 4px;
+}
+.mail-banner .mail-banner-word .subscribe-btn {
+  margin-left: -10px;
+  color: #fff;
+  background-color: #916000;
+  padding: 20px;
+  border: 2px solid #916000;
+  border-radius: 0 4px 4px 0;
+}
+
 .footer {
   background: #916000;
 }
@@ -257,9 +252,9 @@ a {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .copyrights {
-    max-width: 100%;
+    width: 100%;
     margin: 20px auto;
   }
 }
@@ -275,6 +270,10 @@ a {
   color: #8D8D8D;
 }
 
+*, html, body {
+  box-sizing: border-box;
+}
+
 .banner {
   height: 870px;
   background: url(../img/index1.jpg) no-repeat center center;
@@ -282,7 +281,7 @@ a {
   margin-bottom: 60px;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .banner {
     height: 480px;
     max-width: 100%;
@@ -315,7 +314,7 @@ a {
   color: #fff;
   font-size: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .banner-word a {
     max-width: 100%;
   }
@@ -324,7 +323,7 @@ a {
   color: #8D8D8D;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .banner-word {
     width: 345px;
     top: 50%;
@@ -340,11 +339,17 @@ a {
 }
 .hit-product {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .hit-product .hit-product-pic {
   width: 50%;
+  height: 555px;
+}
+.hit-product .hit-product-pic img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  object-position: left;
 }
 .hit-product .hit-product-text {
   width: 50%;
@@ -356,28 +361,49 @@ a {
 .hit-product .hit-product-text p {
   font-size: 20px;
 }
+.hit-product .hit-product-text-2 {
+  width: 50%;
+  padding: 0 110px;
+}
+.hit-product .hit-product-text-2 h4 {
+  font-size: 24px;
+}
+.hit-product .hit-product-text-2 p {
+  font-size: 16px;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hit-product .hit-product-pic {
     width: 100%;
+    height: 350px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 767px) and (max-width: 767px) {
   .hit-product .hit-product-pic {
     margin-bottom: 8px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hit-product .hit-product-text {
     width: 100%;
     padding: 0 0;
   }
 }
+.hit-product-pic-2 {
+  width: 50%;
+  height: 1080px;
+}
+.hit-product-pic-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .rr-c {
   flex-direction: row-reverse;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .rr-c, .r-c {
     flex-direction: column;
     margin-bottom: 32px;
@@ -386,7 +412,7 @@ a {
 .mb60 {
   margin-bottom: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mb60 {
     margin-bottom: 40px;
   }
@@ -410,7 +436,7 @@ a {
   max-width: 100%;
   margin-top: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .plan-btn {
     max-width: 100%;
   }
@@ -425,45 +451,39 @@ a {
   background-color: #E0E0E0;
 }
 .sales-product-bg .sales-product {
-  display: flex;
-  justify-content: space-between;
-}
-.sales-product-bg li {
   width: 32%;
+  margin-right: 2%;
 }
-.sales-product-bg li h4 {
+.sales-product-bg .sales-product-pic {
+  width: 100%;
+  height: 540px;
+}
+@media (max-width: 767px) {
+  .sales-product-bg .sales-product-pic {
+    height: 350px;
+  }
+}
+.sales-product-bg .sales-product-pic img {
+  width: 100%;
+  height: 100%;
+}
+.sales-product-bg .sales-product-text h5 {
   font-size: 24px;
 }
-.sales-product-bg li p {
+.sales-product-bg .sales-product-text p {
   fz: 16px;
 }
-.sales-product-bg li span {
+.sales-product-bg .sales-product-text span {
   color: #8D8D8D;
+  text-decoration: line-through;
   margin-left: 8px;
 }
 
-/*有問題的sold out 目前完全沒顯示
-.mask-soldout{
-    width: 100%;
-    height: 400px;
-    background: $black;
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    p{
-        font-size: $fz-m;
-        line-height: 400px;
-        color: $white;
-        font-weight: bold;
-        text-align: center;
-    }
+.flex {
+  display: flex;
 }
-.soldout-product{
-    position: relative;
-} 
-*/
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
   .sales-product-bg {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -495,7 +515,7 @@ a {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .recycle .recycle-pic {
     width: 100%;
   }
